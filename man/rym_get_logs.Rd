@@ -4,7 +4,7 @@
 Get raw data from yandex metrika.
 }
 \description{
-	Logs API allows you to receive non-aggregated data collected by Yandex.Metric. 
+	'Logs API' allows you to receive non-aggregated data collected by Yandex.Metrica. 
 	This API is intended for service users who want to independently process 
 	statistical data and use them to solve unique analytical problems.
 }
@@ -45,6 +45,10 @@ Data frame with values and fields
 \href{https://tech.yandex.ru/metrika/doc/api2/logs/fields/hits-docpage/}{Hits fields}
 	
 \href{https://tech.yandex.ru/metrika/doc/api2/logs/intro-docpage/}{Logs API docs}
+
+\href{https://selesnow.github.io/rym/}{Docs on rym website}
+
+Run \code{vignette("rym-logs-api", package = "rym")} to see the corresponding vignette.
 	
 }
 \author{
