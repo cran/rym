@@ -1,6 +1,4 @@
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-rym
+# rym - R пакет для работы с API Яндекс.Метрики <a href='https:/selesnow.github.io/ryandexdirect'><img src='https://raw.githubusercontent.com/selesnow/rym/master/inst/logo/rym.png' align="right" height="139" /></a>
 ===
 
 CRAN
@@ -112,5 +110,15 @@ ga.api.stat        <- rym_get_ga(counter    = "ga:22584910",
                                  login      = "selesnow",
                                  token.path = "metrica_token")
 ```
+
+Статьи:
+* [Как работать с API Яндекс.Метрики с помощью языка R](https://netpeak.net/ru/blog/kak-rabotat-s-api-yandeks-metriki-s-pomoshch-yu-yazyka-r/), *Алексей Селезнёв*
+* [Как использовать Rscript в качестве источника данных в Microsoft Power BI на примере Яндекс.Метрики](https://www.mediaguru.ru/blog/kak-ispolzovat-rscript-v-kachestve-istochnika-dannyh-v-microsoft-power-bi-na-primere-yandeks-metriki/), Павел Мрыкин
+* [Построение поведенческих воронок на языке R, на основе данных полученных из Logs API Яндекс.Метрики](https://habr.com/ru/post/462279/), Алексей Селезнёв
+* [Обзор R пакетов для интернет маркетинга, часть 1](https://habr.com/ru/post/425425/), Алексей Селезнёв
+* [Насколько безопасно использовать R пакеты для работы с API рекламных систем](https://habr.com/ru/post/430888/)
+
+Видео уроки:
+* [Как автоматизировать работу с данными Яндекс.Метрики. С помощью языка R](https://www.youtube.com/watch?v=sCp2D6068es)
 
 Автор: Алексей Селезнёв (Head of Analytics Dept. at Netpeak)
