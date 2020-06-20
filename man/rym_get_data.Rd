@@ -12,9 +12,10 @@ rym_get_data(direct.client.logins = NULL, counters,
   dimensions = NULL, filters = NULL, 
   sort = NULL, date.from = "8daysAgo", 
   date.to = "yesterday", accuracy = "full", 
-  include_undefined = TRUE, lang = "ru", 
+  include.undefined = TRUE, lang = "ru", 
   timezone = NULL, pretty = FALSE, 
-  login = NULL, token.path = getwd())
+  login = getOption("rym.user"), 
+  token.path = getOption("rym.token_path"))
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -45,7 +46,7 @@ End date in YYYY-MM-DD.
   \item{accuracy}{
 Sampling level, one of low, medium, high or full. Or numeric from 0 to 1, where 1 - no sampling.
 }
-  \item{include_undefined}{
+  \item{include.undefined}{
 Includes in response rows for which grouping values are not defined.
 }
   \item{lang}{

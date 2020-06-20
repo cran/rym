@@ -11,7 +11,7 @@ CRAN
 
 Официальную русскоязычную документацию можно найти по этой [ссылке](https://selesnow.github.io/rym/)
 
-Краткое описание
+## Краткое описание
 ================
 
 `rym` является R интерфейсом для работы с API Яндекс Метрики, его функции позволяют вам взаимодействовать со следующими API:
@@ -21,7 +21,7 @@ CRAN
 3.  [API совместимый с Core API Google Analytics (v3)](https://tech.yandex.ru/metrika/doc/api2/ga/intro-docpage/) - позволяет запрашивать статистические данные используя при этом название полей такие же как и при работе с Core Reporting API v3.
 4.  [Logs API](https://tech.yandex.ru/metrika/doc/api2/logs/intro-docpage/) - позволяет получить сырые, несгруппированные данные о посещении вашего сайта из Яндекс.Метрики.
 
-Установка
+## Установка
 ---------
 
 Установить `rym` можно как с CRAN так и с GitHub
@@ -30,7 +30,7 @@ CRAN: `install.packages('rym')`
 
 GitHub: `devtools::install_github("selesnow/rym")`
 
-Виньетки
+## Виньетки
 ========
 
 Помимо официальной документации у пакета есть 5 виньеток, вводная, и отдельно виньетка под каждый API, открыть их можно с помощью следующих команд:
@@ -111,14 +111,17 @@ ga.api.stat        <- rym_get_ga(counter    = "ga:22584910",
                                  token.path = "metrica_token")
 ```
 
-Статьи:
-* [Как работать с API Яндекс.Метрики с помощью языка R](https://netpeak.net/ru/blog/kak-rabotat-s-api-yandeks-metriki-s-pomoshch-yu-yazyka-r/), *Алексей Селезнёв*
-* [Как использовать Rscript в качестве источника данных в Microsoft Power BI на примере Яндекс.Метрики](https://www.mediaguru.ru/blog/kak-ispolzovat-rscript-v-kachestve-istochnika-dannyh-v-microsoft-power-bi-na-primere-yandeks-metriki/), Павел Мрыкин
-* [Построение поведенческих воронок на языке R, на основе данных полученных из Logs API Яндекс.Метрики](https://habr.com/ru/post/462279/), Алексей Селезнёв
-* [Обзор R пакетов для интернет маркетинга, часть 1](https://habr.com/ru/post/425425/), Алексей Селезнёв
-* [Насколько безопасно использовать R пакеты для работы с API рекламных систем](https://habr.com/ru/post/430888/)
+## Статьи:
 
-Видео уроки:
-* [Как автоматизировать работу с данными Яндекс.Метрики. С помощью языка R](https://www.youtube.com/watch?v=sCp2D6068es)
+- [Как работать с API Яндекс.Метрики с помощью языка R](https://netpeak.net/ru/blog/kak-rabotat-s-api-yandeks-metriki-s-pomoshch-yu-yazyka-r/), *Алексей Селезнёв*
+- [Как использовать Rscript в качестве источника данных в Microsoft Power BI на примере Яндекс.Метрики](https://www.mediaguru.ru/blog/kak-ispolzovat-rscript-v-kachestve-istochnika-dannyh-v-microsoft-power-bi-na-primere-yandeks-metriki/), *Павел Мрыкин*
+- [Построение поведенческих воронок на языке R, на основе данных полученных из Logs API Яндекс.Метрики](https://habr.com/ru/post/462279/), *Алексей Селезнёв*
+- [Обзор R пакетов для интернет маркетинга, часть 1](https://habr.com/ru/post/425425/), *Алексей Селезнёв*
+- [Насколько безопасно использовать R пакеты для работы с API рекламных систем](https://habr.com/ru/post/430888/), *Алексей Селезнёв*
+- [Как массово удалить в интернет-магазине страницы товаров, которые не приносят трафик](https://netpeak.net/ru/blog/kak-massovo-udalit-v-internet-magazine-stranitsy-tovarov-kotoryye-ne-prinosyat-trafik/), *Богдан Неряхин*
+
+## Видео уроки:
+
+-   [Как автоматизировать работу с данными Яндекс.Метрики. С помощью языка R](https://www.youtube.com/watch?v=sCp2D6068es)
 
 Автор: Алексей Селезнёв (Head of Analytics Dept. at Netpeak)

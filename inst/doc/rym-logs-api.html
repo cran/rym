@@ -8,38 +8,52 @@
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <meta name="author" content="Alexey Seleznev" />
 
-<meta name="date" content="2019-12-10" />
+<meta name="date" content="2020-06-19" />
 
 <title>rym: Logs API Яндекс.Метрики</title>
 
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
 
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
+    border: none; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -48,9 +62,9 @@ pre.numberSource a.sourceLine::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {  }
+  {   }
 @media screen {
-a.sourceLine::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -117,9 +131,6 @@ padding-right: 2em;
 font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-size: 14px;
 line-height: 1.35;
-}
-#header {
-text-align: center;
 }
 #TOC {
 clear: both;
@@ -288,7 +299,8 @@ code > span.st { color: #d14; }
 code > span.co { color: #888888; font-style: italic; } 
 code > span.ot { color: #007020; } 
 code > span.al { color: #ff0000; font-weight: bold; } 
-code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61717; background-color: #e3d2d2; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
 </style>
 
 
@@ -303,7 +315,7 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 
 <h1 class="title toc-ignore">rym: Logs API Яндекс.Метрики</h1>
 <h4 class="author">Alexey Seleznev</h4>
-<h4 class="date">2019-12-10</h4>
+<h4 class="date">2020-06-19</h4>
 
 
 
@@ -326,15 +338,15 @@ code > span.fu { color: #900; font-weight: bold; }  code > span.er { color: #a61
 </ul>
 <div id="пример-работы-с-logs-api-яндекс.метрики." class="section level3">
 <h3>Пример работы с Logs API Яндекс.Метрики.</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">logs.api.stat      &lt;-<span class="st"> </span><span class="kw">rym_get_logs</span>(<span class="dt">counter    =</span> <span class="dv">00000000</span>,</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2">                                   <span class="dt">date.from  =</span> <span class="st">&quot;2018-08-01&quot;</span>,</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3">                                   <span class="dt">date.to    =</span> <span class="st">&quot;2018-08-05&quot;</span>,</a>
-<a class="sourceLine" id="cb1-4" data-line-number="4">                                   <span class="dt">fields     =</span> <span class="st">&quot;ym:s:date,</span></a>
-<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="st">                                                 ym:s:lastTrafficSource,</span></a>
-<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="st">                                                 ym:s:referer&quot;</span>,</a>
-<a class="sourceLine" id="cb1-7" data-line-number="7">                                   <span class="dt">source     =</span> <span class="st">&quot;visits&quot;</span>,</a>
-<a class="sourceLine" id="cb1-8" data-line-number="8">                                   <span class="dt">login      =</span> <span class="st">&quot;ваш логин&quot;</span>,</a>
-<a class="sourceLine" id="cb1-9" data-line-number="9">                                   <span class="dt">token.path =</span> <span class="st">&quot;metrica_token&quot;</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>logs.api.stat      &lt;-<span class="st"> </span><span class="kw">rym_get_logs</span>(<span class="dt">counter    =</span> <span class="dv">00000000</span>,</span>
+<span id="cb1-2"><a href="#cb1-2"></a>                                   <span class="dt">date.from  =</span> <span class="st">&quot;2018-08-01&quot;</span>,</span>
+<span id="cb1-3"><a href="#cb1-3"></a>                                   <span class="dt">date.to    =</span> <span class="st">&quot;2018-08-05&quot;</span>,</span>
+<span id="cb1-4"><a href="#cb1-4"></a>                                   <span class="dt">fields     =</span> <span class="st">&quot;ym:s:date,</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="st">                                                 ym:s:lastTrafficSource,</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="st">                                                 ym:s:referer&quot;</span>,</span>
+<span id="cb1-7"><a href="#cb1-7"></a>                                   <span class="dt">source     =</span> <span class="st">&quot;visits&quot;</span>,</span>
+<span id="cb1-8"><a href="#cb1-8"></a>                                   <span class="dt">login      =</span> <span class="st">&quot;ваш логин&quot;</span>,</span>
+<span id="cb1-9"><a href="#cb1-9"></a>                                   <span class="dt">token.path =</span> <span class="st">&quot;metrica_token&quot;</span>)</span></code></pre></div>
 <p><em>Перед использованием данного примера замените значения аргументов counter и login на ваши.</em></p>
 </div>
 </div>
