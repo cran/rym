@@ -1,9 +1,15 @@
 Package: rym
 Type: Package
 Title: R Interface to Yandex Metrica API
-Version: 1.0.0
-Date: 2020-06-11
-Author: Alexey Seleznev <selesnow@gmail.com>
+Version: 1.0.3
+Date: 2020-08-12
+Authors@R: 
+    c(person(given  = "Alexey",
+             family = "Seleznev",
+             role   = c("aut", "cre"),
+             email  = "selesnow@gmail.com",
+             comment = c(ORCID = "0000-0003-0410-7385")))
+Author: Alexey Seleznev [aut, cre] (<https://orcid.org/0000-0003-0410-7385>)
 Maintainer: Alexey Seleznev <selesnow@gmail.com>
 Description: Allows work with 'Management API' for load counters, segments, filters,
 	user permissions and goals list from Yandex Metrica, 'Reporting API' allows you to get 
@@ -19,10 +25,10 @@ Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
 License: GPL-2
 Imports: httr, stringr, utils, purrr
-URL: http://selesnow.github.io/rym
+URL: https://selesnow.github.io/rym/
 Encoding: UTF-8
 Language: ru
 NeedsCompilation: no
-Packaged: 2020-06-19 16:20:51 UTC; Alsey
+Packaged: 2020-08-12 16:05:46 UTC; Alsey
 Repository: CRAN
-Date/Publication: 2020-06-20 08:40:03 UTC
+Date/Publication: 2020-08-12 16:20:03 UTC

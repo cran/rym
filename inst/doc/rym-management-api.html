@@ -12,7 +12,7 @@
 
 <meta name="author" content="Alexey Seleznev" />
 
-<meta name="date" content="2020-06-19" />
+<meta name="date" content="2020-08-12" />
 
 <title>rym: API управления Яндекс.Метрики</title>
 
@@ -315,7 +315,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <h1 class="title toc-ignore">rym: API управления Яндекс.Метрики</h1>
 <h4 class="author">Alexey Seleznev</h4>
-<h4 class="date">2020-06-19</h4>
+<h4 class="date">2020-08-12</h4>
 
 
 
@@ -469,36 +469,36 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <div id="пример-работы-с-api-управления" class="section level3">
 <h3>Пример работы с API управления</h3>
 <p><em>При использовании приведённого нже примера замените </em>“ваш логин”* на логин пользователя Яндекса, под которым есть доступ к нужному вам счётчику Яндекс.Метрики, вместо <em>000000000</em> введите номер нужного вам счётчика.*</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">library</span>(rym)</span>
-<span id="cb1-2"><a href="#cb1-2"></a></span>
-<span id="cb1-3"><a href="#cb1-3"></a><span class="co"># список доступных счётчиков</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a>my_counters &lt;-<span class="st"> </span><span class="kw">rym_get_counters</span>(<span class="dt">login      =</span> <span class="st">&quot;ваш логин&quot;</span>,</span>
-<span id="cb1-5"><a href="#cb1-5"></a>                                <span class="dt">token.path =</span> <span class="st">&quot;metrica_token&quot;</span>)</span>
-<span id="cb1-6"><a href="#cb1-6"></a></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="co"># список целей</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a>my_goals &lt;-<span class="st"> </span><span class="kw">rym_get_goals</span>(<span class="dt">counter    =</span> <span class="dv">000000000</span>,</span>
-<span id="cb1-9"><a href="#cb1-9"></a>                          <span class="dt">login      =</span> <span class="st">&quot;ваш логин&quot;</span>,</span>
-<span id="cb1-10"><a href="#cb1-10"></a>                          <span class="dt">token.path =</span> <span class="st">&quot;metrica_token&quot;</span>)</span>
-<span id="cb1-11"><a href="#cb1-11"></a></span>
-<span id="cb1-12"><a href="#cb1-12"></a><span class="co"># список фильтров</span></span>
-<span id="cb1-13"><a href="#cb1-13"></a>my_filter &lt;-<span class="st"> </span><span class="kw">rym_get_filters</span>(<span class="dt">counter    =</span> <span class="dv">000000000</span>,</span>
-<span id="cb1-14"><a href="#cb1-14"></a>                             <span class="dt">login      =</span> <span class="st">&quot;ваш логин&quot;</span>,</span>
-<span id="cb1-15"><a href="#cb1-15"></a>                             <span class="dt">token.path =</span> <span class="st">&quot;metrica_token&quot;</span>)</span>
-<span id="cb1-16"><a href="#cb1-16"></a></span>
-<span id="cb1-17"><a href="#cb1-17"></a><span class="co"># список сегментов</span></span>
-<span id="cb1-18"><a href="#cb1-18"></a>my_segments &lt;-<span class="st"> </span><span class="kw">rym_get_segments</span>(<span class="dt">counter    =</span> <span class="dv">000000000</span>,</span>
-<span id="cb1-19"><a href="#cb1-19"></a>                                <span class="dt">login      =</span> <span class="st">&quot;ваш логин&quot;</span>,</span>
-<span id="cb1-20"><a href="#cb1-20"></a>                                <span class="dt">token.path =</span> <span class="st">&quot;metrica_token&quot;</span>)</span>
-<span id="cb1-21"><a href="#cb1-21"></a></span>
-<span id="cb1-22"><a href="#cb1-22"></a><span class="co"># список клиентов Яндекс Директ</span></span>
-<span id="cb1-23"><a href="#cb1-23"></a>my_clients &lt;-<span class="st"> </span><span class="kw">rym_get_direct_clients</span>(<span class="dt">counters=</span><span class="st">&quot;000000000,111111111&quot;</span>,</span>
-<span id="cb1-24"><a href="#cb1-24"></a>                                     <span class="dt">login =</span> <span class="st">&quot;my_login&quot;</span>,</span>
-<span id="cb1-25"><a href="#cb1-25"></a>                                     <span class="dt">token.path =</span> <span class="st">&quot;metrica_token&quot;</span>)</span>
-<span id="cb1-26"><a href="#cb1-26"></a></span>
-<span id="cb1-27"><a href="#cb1-27"></a><span class="co"># список пользователей</span></span>
-<span id="cb1-28"><a href="#cb1-28"></a>users &lt;-<span class="st"> </span><span class="kw">rym_users_grants</span>(<span class="dt">counter    =</span> <span class="dv">000000000</span>,</span>
-<span id="cb1-29"><a href="#cb1-29"></a>                          <span class="dt">login      =</span> <span class="st">&quot;ваш логин&quot;</span>,</span>
-<span id="cb1-30"><a href="#cb1-30"></a>                          <span class="dt">token.path =</span> <span class="st">&quot;metrica_token&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">library</span>(rym)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a><span class="co"># список доступных счётчиков</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>my_counters &lt;-<span class="st"> </span><span class="kw">rym_get_counters</span>(<span class="dt">login      =</span> <span class="st">&quot;ваш логин&quot;</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>                                <span class="dt">token.path =</span> <span class="st">&quot;metrica_token&quot;</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a><span class="co"># список целей</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>my_goals &lt;-<span class="st"> </span><span class="kw">rym_get_goals</span>(<span class="dt">counter    =</span> <span class="dv">000000000</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>                          <span class="dt">login      =</span> <span class="st">&quot;ваш логин&quot;</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a>                          <span class="dt">token.path =</span> <span class="st">&quot;metrica_token&quot;</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a><span class="co"># список фильтров</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a>my_filter &lt;-<span class="st"> </span><span class="kw">rym_get_filters</span>(<span class="dt">counter    =</span> <span class="dv">000000000</span>,</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a>                             <span class="dt">login      =</span> <span class="st">&quot;ваш логин&quot;</span>,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true"></a>                             <span class="dt">token.path =</span> <span class="st">&quot;metrica_token&quot;</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true"></a><span class="co"># список сегментов</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true"></a>my_segments &lt;-<span class="st"> </span><span class="kw">rym_get_segments</span>(<span class="dt">counter    =</span> <span class="dv">000000000</span>,</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true"></a>                                <span class="dt">login      =</span> <span class="st">&quot;ваш логин&quot;</span>,</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true"></a>                                <span class="dt">token.path =</span> <span class="st">&quot;metrica_token&quot;</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true"></a><span class="co"># список клиентов Яндекс Директ</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true"></a>my_clients &lt;-<span class="st"> </span><span class="kw">rym_get_direct_clients</span>(<span class="dt">counters=</span><span class="st">&quot;000000000,111111111&quot;</span>,</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true"></a>                                     <span class="dt">login =</span> <span class="st">&quot;my_login&quot;</span>,</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true"></a>                                     <span class="dt">token.path =</span> <span class="st">&quot;metrica_token&quot;</span>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true"></a><span class="co"># список пользователей</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true"></a>users &lt;-<span class="st"> </span><span class="kw">rym_users_grants</span>(<span class="dt">counter    =</span> <span class="dv">000000000</span>,</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true"></a>                          <span class="dt">login      =</span> <span class="st">&quot;ваш логин&quot;</span>,</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true"></a>                          <span class="dt">token.path =</span> <span class="st">&quot;metrica_token&quot;</span>)</span></code></pre></div>
 </div>
 <div id="создание-целей-в-яндекс-метрике" class="section level2">
 <h2>Создание целей в Яндекс Метрике</h2>
@@ -539,12 +539,12 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <li>url - Адрес страницы или части страницы для условия.</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">rym_add_goal</span>(<span class="dv">123456789</span>, </span>
-<span id="cb2-2"><a href="#cb2-2"></a>             <span class="dt">name =</span> <span class="st">&#39;first_goal&#39;</span>,</span>
-<span id="cb2-3"><a href="#cb2-3"></a>             <span class="dt">type =</span> <span class="st">&#39;action&#39;</span>,</span>
-<span id="cb2-4"><a href="#cb2-4"></a>             <span class="dt">conditions =</span> <span class="kw">list</span>(<span class="dt">type =</span> <span class="st">&#39;exact&#39;</span>, </span>
-<span id="cb2-5"><a href="#cb2-5"></a>                               <span class="dt">url =</span> <span class="st">&#39;rym-first-goal&#39;</span>),</span>
-<span id="cb2-6"><a href="#cb2-6"></a>             <span class="dt">login =</span> <span class="st">&#39;your_login&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="kw">rym_add_goal</span>(<span class="dv">123456789</span>, </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>             <span class="dt">name =</span> <span class="st">&#39;first_goal&#39;</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>             <span class="dt">type =</span> <span class="st">&#39;action&#39;</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>             <span class="dt">conditions =</span> <span class="kw">list</span>(<span class="dt">type =</span> <span class="st">&#39;exact&#39;</span>, </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>                               <span class="dt">url =</span> <span class="st">&#39;rym-first-goal&#39;</span>),</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>             <span class="dt">login =</span> <span class="st">&#39;your_login&#39;</span>)</span></code></pre></div>
 </div>
 </div>
 <div id="создание-сегментов-в-яндекс-метрике" class="section level2">
@@ -556,11 +556,11 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <li>name - Название сегмента</li>
 <li>expression - Выражение, которое соответствует значению параметра <a href="https://yandex.ru/dev/metrika/doc/api2/api_v1/segmentation-docpage/">filters</a>.</li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">rym_add_segment</span>(</span>
-<span id="cb3-2"><a href="#cb3-2"></a>     <span class="dt">counter =</span> <span class="dv">123456789</span>, </span>
-<span id="cb3-3"><a href="#cb3-3"></a>     <span class="dt">name =</span> <span class="st">&quot;my_segment&quot;</span>,</span>
-<span id="cb3-4"><a href="#cb3-4"></a>     <span class="dt">expression =</span> <span class="st">&quot;ym:s:trafficSource==&#39;organic&#39; AND ym:s:isNewUser==&#39;Yes&#39;&quot;</span>,</span>
-<span id="cb3-5"><a href="#cb3-5"></a>     <span class="dt">login =</span> <span class="st">&quot;your_login&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="kw">rym_add_segment</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>     <span class="dt">counter =</span> <span class="dv">123456789</span>, </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>     <span class="dt">name =</span> <span class="st">&quot;my_segment&quot;</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>     <span class="dt">expression =</span> <span class="st">&quot;ym:s:trafficSource==&#39;organic&#39; AND ym:s:isNewUser==&#39;Yes&#39;&quot;</span>,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>     <span class="dt">login =</span> <span class="st">&quot;your_login&quot;</span>)</span></code></pre></div>
 </div>
 </div>
 </div>

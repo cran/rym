@@ -12,7 +12,7 @@
 
 <meta name="author" content="Alexey Seleznev" />
 
-<meta name="date" content="2020-06-19" />
+<meta name="date" content="2020-08-12" />
 
 <title>rym: Logs API Яндекс.Метрики</title>
 
@@ -315,7 +315,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <h1 class="title toc-ignore">rym: Logs API Яндекс.Метрики</h1>
 <h4 class="author">Alexey Seleznev</h4>
-<h4 class="date">2020-06-19</h4>
+<h4 class="date">2020-08-12</h4>
 
 
 
@@ -338,15 +338,15 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 </ul>
 <div id="пример-работы-с-logs-api-яндекс.метрики." class="section level3">
 <h3>Пример работы с Logs API Яндекс.Метрики.</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>logs.api.stat      &lt;-<span class="st"> </span><span class="kw">rym_get_logs</span>(<span class="dt">counter    =</span> <span class="dv">00000000</span>,</span>
-<span id="cb1-2"><a href="#cb1-2"></a>                                   <span class="dt">date.from  =</span> <span class="st">&quot;2018-08-01&quot;</span>,</span>
-<span id="cb1-3"><a href="#cb1-3"></a>                                   <span class="dt">date.to    =</span> <span class="st">&quot;2018-08-05&quot;</span>,</span>
-<span id="cb1-4"><a href="#cb1-4"></a>                                   <span class="dt">fields     =</span> <span class="st">&quot;ym:s:date,</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a><span class="st">                                                 ym:s:lastTrafficSource,</span></span>
-<span id="cb1-6"><a href="#cb1-6"></a><span class="st">                                                 ym:s:referer&quot;</span>,</span>
-<span id="cb1-7"><a href="#cb1-7"></a>                                   <span class="dt">source     =</span> <span class="st">&quot;visits&quot;</span>,</span>
-<span id="cb1-8"><a href="#cb1-8"></a>                                   <span class="dt">login      =</span> <span class="st">&quot;ваш логин&quot;</span>,</span>
-<span id="cb1-9"><a href="#cb1-9"></a>                                   <span class="dt">token.path =</span> <span class="st">&quot;metrica_token&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a>logs.api.stat      &lt;-<span class="st"> </span><span class="kw">rym_get_logs</span>(<span class="dt">counter    =</span> <span class="dv">00000000</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>                                   <span class="dt">date.from  =</span> <span class="st">&quot;2018-08-01&quot;</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>                                   <span class="dt">date.to    =</span> <span class="st">&quot;2018-08-05&quot;</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>                                   <span class="dt">fields     =</span> <span class="st">&quot;ym:s:date,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a><span class="st">                                                 ym:s:lastTrafficSource,</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a><span class="st">                                                 ym:s:referer&quot;</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>                                   <span class="dt">source     =</span> <span class="st">&quot;visits&quot;</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>                                   <span class="dt">login      =</span> <span class="st">&quot;ваш логин&quot;</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>                                   <span class="dt">token.path =</span> <span class="st">&quot;metrica_token&quot;</span>)</span></code></pre></div>
 <p><em>Перед использованием данного примера замените значения аргументов counter и login на ваши.</em></p>
 </div>
 </div>

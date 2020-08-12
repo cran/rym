@@ -329,13 +329,13 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <div id="создать-цель-в-яндекс-метрике" class="section level3">
 <h3>Создать цель в Яндекс Метрике</h3>
 <p>Первый шаг - создание цели, которую в дальнейшем мы будет подгружать, для этого используйте функцию <code>rym_add_goal()</code>.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># создаём цель</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="kw">rym_add_goal</span>(<span class="dv">123456789</span>, </span>
-<span id="cb1-3"><a href="#cb1-3"></a>             <span class="dt">name =</span> <span class="st">&#39;Заказ оплачен&#39;</span>,</span>
-<span id="cb1-4"><a href="#cb1-4"></a>             <span class="dt">type =</span> <span class="st">&#39;action&#39;</span>,</span>
-<span id="cb1-5"><a href="#cb1-5"></a>             <span class="dt">conditions =</span> <span class="kw">list</span>(<span class="dt">type =</span> <span class="st">&#39;exact&#39;</span>, </span>
-<span id="cb1-6"><a href="#cb1-6"></a>                               <span class="dt">url  =</span> <span class="st">&#39;order_confirmed&#39;</span>),</span>
-<span id="cb1-7"><a href="#cb1-7"></a>             <span class="dt">login =</span> <span class="st">&#39;yandex_login&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="co"># создаём цель</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a><span class="kw">rym_add_goal</span>(<span class="dv">123456789</span>, </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>             <span class="dt">name =</span> <span class="st">&#39;Заказ оплачен&#39;</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>             <span class="dt">type =</span> <span class="st">&#39;action&#39;</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>             <span class="dt">conditions =</span> <span class="kw">list</span>(<span class="dt">type =</span> <span class="st">&#39;exact&#39;</span>, </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>                               <span class="dt">url  =</span> <span class="st">&#39;order_confirmed&#39;</span>),</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>             <span class="dt">login =</span> <span class="st">&#39;yandex_login&#39;</span>)</span></code></pre></div>
 <p>Можно использовать ранее созданную цель, если конверсия по этой цели совершается и на сайте, и вне его и вы хотите получать общую статистику.</p>
 </div>
 <div id="проверка-готовности-метрики-к-загрузке-конверсий" class="section level3">
@@ -343,13 +343,13 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <p>Учтенный Метрикой визит может быть дополнен информацией о конверсии в течение 21 дня. Период учета конверсий увеличивается постепенно с момента включения опции.</p>
 <p>Включить опцию можно либо в интерфейсе Метрики (На странице Настройка → Загрузка данных), либо с помощью функции <code>rym_enable_offline_conversion()</code>.</p>
 <p>Чтобы проверить, можно ли загружать данные и за какой период, используйте функцию <code>rym_allow_offline_conversion()</code>.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># оффлайн конверсии</span></span>
-<span id="cb2-2"><a href="#cb2-2"></a><span class="kw">rym_enable_offline_conversion</span>(<span class="dv">123456789</span>, </span>
-<span id="cb2-3"><a href="#cb2-3"></a>                              <span class="dt">login =</span> <span class="st">&#39;yandex_login&#39;</span>) </span>
-<span id="cb2-4"><a href="#cb2-4"></a></span>
-<span id="cb2-5"><a href="#cb2-5"></a><span class="co"># проверка можно ли загружать данные и за какой период</span></span>
-<span id="cb2-6"><a href="#cb2-6"></a><span class="kw">rym_allow_offline_conversion</span>(<span class="dv">123456789</span>, </span>
-<span id="cb2-7"><a href="#cb2-7"></a>                             <span class="dt">login =</span> <span class="st">&#39;yandex_login&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="co"># оффлайн конверсии</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a><span class="kw">rym_enable_offline_conversion</span>(<span class="dv">123456789</span>, </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>                              <span class="dt">login =</span> <span class="st">&#39;yandex_login&#39;</span>) </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a><span class="co"># проверка можно ли загружать данные и за какой период</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a><span class="kw">rym_allow_offline_conversion</span>(<span class="dv">123456789</span>, </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a>                             <span class="dt">login =</span> <span class="st">&#39;yandex_login&#39;</span>)</span></code></pre></div>
 <p>При необходимости вы можете отключить опцию загрузки оффлайн конверсий функцией <code>rym_disable_offline_conversion()</code>.</p>
 </div>
 <div id="подготовка-данных-для-загрузки-в-яндекс.метрику" class="section level3">
@@ -377,19 +377,19 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <div id="загрузка-оффлайн-конверсий-в-яндекс-метрику" class="section level2">
 <h2>Загрузка оффлайн конверсий в Яндекс Метрику</h2>
 <p>Теперь вы можете использовать функцию <code>rym_upload_offline_conversion()</code> для загрузки оффлайн конверсий в Яндекс.Метрику.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">rym_upload_offline_conversion</span>(<span class="dv">12345</span>, </span>
-<span id="cb3-2"><a href="#cb3-2"></a>                              <span class="dt">data =</span> conv_data,</span>
-<span id="cb3-3"><a href="#cb3-3"></a>                              <span class="dt">client.id.type =</span> <span class="st">&quot;CLIENT_ID&quot;</span>,</span>
-<span id="cb3-4"><a href="#cb3-4"></a>                              <span class="dt">login =</span> <span class="st">&#39;yandex_login&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="kw">rym_upload_offline_conversion</span>(<span class="dv">12345</span>, </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a>                              <span class="dt">data =</span> conv_data,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>                              <span class="dt">client.id.type =</span> <span class="st">&quot;CLIENT_ID&quot;</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>                              <span class="dt">login =</span> <span class="st">&#39;yandex_login&#39;</span>)</span></code></pre></div>
 <p>Обработка данных может занимать до 24 часов, после чего загруженные данные появятся в отчётах Яндекс.Метрики.</p>
 </div>
 <div id="получить-список-загрузок-оффлайн-конверсий" class="section level2">
 <h2>Получить список загрузок оффлайн конверсий</h2>
 <p>Посмотреть список загрузок, и их статусы можно с помощью функции <code>rym_get_uploadings_offline_conversions()</code>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a></span>
-<span id="cb4-2"><a href="#cb4-2"></a>uploads &lt;-<span class="st"> </span><span class="kw">rym_get_uploadings_offline_conversions</span>(</span>
-<span id="cb4-3"><a href="#cb4-3"></a>              <span class="dt">counter =</span> <span class="dv">123456789</span>,</span>
-<span id="cb4-4"><a href="#cb4-4"></a>              <span class="dt">login   =</span> <span class="st">&#39;yandex_login&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a>uploads &lt;-<span class="st"> </span><span class="kw">rym_get_uploadings_offline_conversions</span>(</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a>              <span class="dt">counter =</span> <span class="dv">123456789</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a>              <span class="dt">login   =</span> <span class="st">&#39;yandex_login&#39;</span>)</span></code></pre></div>
 </div>
 <div id="ссылки" class="section level2">
 <h2>Ссылки</h2>

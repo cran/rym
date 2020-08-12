@@ -12,7 +12,7 @@
 
 <meta name="author" content="Alexey Seleznev" />
 
-<meta name="date" content="2020-06-19" />
+<meta name="date" content="2020-08-12" />
 
 <title>rym: API Яндекс.Метрики совместимым с Core Reporting API Google Analytics</title>
 
@@ -315,7 +315,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <h1 class="title toc-ignore">rym: API Яндекс.Метрики совместимым с Core Reporting API Google Analytics</h1>
 <h4 class="author">Alexey Seleznev</h4>
-<h4 class="date">2020-06-19</h4>
+<h4 class="date">2020-08-12</h4>
 
 
 
@@ -341,15 +341,15 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 </ul>
 <div id="пример-работы-с-api-совместимым-с-core-api-google-analytics" class="section level3">
 <h3>Пример работы с API совместимым с Core API Google Analytics</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>ga.api.stat        &lt;-<span class="st"> </span><span class="kw">rym_get_ga</span>(<span class="dt">counter    =</span> <span class="st">&quot;ga:00000000&quot;</span>,</span>
-<span id="cb1-2"><a href="#cb1-2"></a>                                 <span class="dt">dimensions =</span> <span class="st">&quot;ga:date,ga:source&quot;</span>,</span>
-<span id="cb1-3"><a href="#cb1-3"></a>                                 <span class="dt">metrics    =</span> <span class="st">&quot;ga:sessions,ga:users&quot;</span>,</span>
-<span id="cb1-4"><a href="#cb1-4"></a>                                 <span class="dt">start.date =</span> <span class="st">&quot;2018-08-01&quot;</span>,</span>
-<span id="cb1-5"><a href="#cb1-5"></a>                                 <span class="dt">end.date   =</span> <span class="st">&quot;20daysAgo&quot;</span>,</span>
-<span id="cb1-6"><a href="#cb1-6"></a>                                 <span class="dt">filters    =</span> <span class="st">&quot;ga:source==google.ru&quot;</span>,</span>
-<span id="cb1-7"><a href="#cb1-7"></a>                                 <span class="dt">sort       =</span> <span class="st">&quot;-ga:date&quot;</span>,</span>
-<span id="cb1-8"><a href="#cb1-8"></a>                                 <span class="dt">login      =</span> <span class="st">&quot;ваш логин&quot;</span>,</span>
-<span id="cb1-9"><a href="#cb1-9"></a>                                 <span class="dt">token.path =</span> <span class="st">&quot;metrica_token&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a>ga.api.stat        &lt;-<span class="st"> </span><span class="kw">rym_get_ga</span>(<span class="dt">counter    =</span> <span class="st">&quot;ga:00000000&quot;</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>                                 <span class="dt">dimensions =</span> <span class="st">&quot;ga:date,ga:source&quot;</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>                                 <span class="dt">metrics    =</span> <span class="st">&quot;ga:sessions,ga:users&quot;</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>                                 <span class="dt">start.date =</span> <span class="st">&quot;2018-08-01&quot;</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>                                 <span class="dt">end.date   =</span> <span class="st">&quot;20daysAgo&quot;</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>                                 <span class="dt">filters    =</span> <span class="st">&quot;ga:source==google.ru&quot;</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>                                 <span class="dt">sort       =</span> <span class="st">&quot;-ga:date&quot;</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>                                 <span class="dt">login      =</span> <span class="st">&quot;ваш логин&quot;</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>                                 <span class="dt">token.path =</span> <span class="st">&quot;metrica_token&quot;</span>)</span></code></pre></div>
 </div>
 </div>
 

@@ -1,10 +1,10 @@
-# rym - R пакет для работы с API Яндекс.Метрики <a href='https:/selesnow.github.io/ryandexdirect'><img src='https://raw.githubusercontent.com/selesnow/rym/master/inst/logo/rym.png' align="right" height="139" /></a>
+# rym - R пакет для работы с API Яндекс.Метрики <a href='https://selesnow.github.io/ryandexdirect/'><img src='https://raw.githubusercontent.com/selesnow/rym/master/inst/logo/rym.png' align="right" height="139" /></a>
 ===
 
 CRAN
 ====
 
-[![Rdoc](http://www.rdocumentation.org/badges/version/rym)](http://www.rdocumentation.org/packages/rym)
+[![Rdoc](http://www.rdocumentation.org/badges/version/rym)](https://www.rdocumentation.org/packages/rym)
 
 Официальная документация к пакету rym
 =====================================

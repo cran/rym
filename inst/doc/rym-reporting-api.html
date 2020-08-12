@@ -12,7 +12,7 @@
 
 <meta name="author" content="Alexey Seleznev" />
 
-<meta name="date" content="2020-06-19" />
+<meta name="date" content="2020-08-12" />
 
 <title>rym: API отчётов Яндекс.Метрики</title>
 
@@ -315,7 +315,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <h1 class="title toc-ignore">rym: API отчётов Яндекс.Метрики</h1>
 <h4 class="author">Alexey Seleznev</h4>
-<h4 class="date">2020-06-19</h4>
+<h4 class="date">2020-08-12</h4>
 
 
 
@@ -349,17 +349,17 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 </ul>
 <div id="пример-работы-с-api-управления" class="section level3">
 <h3>Пример работы с API управления</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>reporting.api.stat &lt;-<span class="st"> </span><span class="kw">rym_get_data</span>(<span class="dt">counters   =</span> <span class="st">&quot;00000000,111111111&quot;</span>,</span>
-<span id="cb1-2"><a href="#cb1-2"></a>                                   <span class="dt">date.from  =</span> <span class="st">&quot;2018-08-01&quot;</span>,</span>
-<span id="cb1-3"><a href="#cb1-3"></a>                                   <span class="dt">date.to    =</span> <span class="st">&quot;yesterday&quot;</span>,</span>
-<span id="cb1-4"><a href="#cb1-4"></a>                                   <span class="dt">dimensions =</span> <span class="st">&quot;ym:s:date,ym:s:lastTrafficSource&quot;</span>,</span>
-<span id="cb1-5"><a href="#cb1-5"></a>                                   <span class="dt">metrics    =</span> <span class="st">&quot;ym:s:visits,ym:s:pageviews,ym:s:users&quot;</span>,</span>
-<span id="cb1-6"><a href="#cb1-6"></a>                                   <span class="dt">filters    =</span> <span class="st">&quot;ym:s:trafficSourceName==&#39;Переходы из поисковых систем&#39; AND ym:s:isNewUser==&#39;Yes&#39;&quot;</span>,</span>
-<span id="cb1-7"><a href="#cb1-7"></a>                                   <span class="dt">sort       =</span> <span class="st">&quot;-ym:s:date&quot;</span>,</span>
-<span id="cb1-8"><a href="#cb1-8"></a>                                   <span class="dt">accuracy   =</span> <span class="st">&quot;full&quot;</span>,</span>
-<span id="cb1-9"><a href="#cb1-9"></a>                                   <span class="dt">login      =</span> <span class="st">&quot;ваш логин&quot;</span>,</span>
-<span id="cb1-10"><a href="#cb1-10"></a>                                   <span class="dt">token.path =</span> <span class="st">&quot;metrica_token&quot;</span>,</span>
-<span id="cb1-11"><a href="#cb1-11"></a>                                   <span class="dt">lang       =</span> <span class="st">&quot;ru&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a>reporting.api.stat &lt;-<span class="st"> </span><span class="kw">rym_get_data</span>(<span class="dt">counters   =</span> <span class="st">&quot;00000000,111111111&quot;</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>                                   <span class="dt">date.from  =</span> <span class="st">&quot;2018-08-01&quot;</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>                                   <span class="dt">date.to    =</span> <span class="st">&quot;yesterday&quot;</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>                                   <span class="dt">dimensions =</span> <span class="st">&quot;ym:s:date,ym:s:lastTrafficSource&quot;</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>                                   <span class="dt">metrics    =</span> <span class="st">&quot;ym:s:visits,ym:s:pageviews,ym:s:users&quot;</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>                                   <span class="dt">filters    =</span> <span class="st">&quot;ym:s:trafficSourceName==&#39;Переходы из поисковых систем&#39; AND ym:s:isNewUser==&#39;Yes&#39;&quot;</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>                                   <span class="dt">sort       =</span> <span class="st">&quot;-ym:s:date&quot;</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>                                   <span class="dt">accuracy   =</span> <span class="st">&quot;full&quot;</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>                                   <span class="dt">login      =</span> <span class="st">&quot;ваш логин&quot;</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a>                                   <span class="dt">token.path =</span> <span class="st">&quot;metrica_token&quot;</span>,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a>                                   <span class="dt">lang       =</span> <span class="st">&quot;ru&quot;</span>)</span></code></pre></div>
 <p><em>Необходимо указать номера своиз счётчиков, логин и путь к папке для хранения файла с учётными данными.</em></p>
 </div>
 </div>
