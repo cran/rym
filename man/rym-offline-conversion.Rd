@@ -77,7 +77,7 @@ Example of \href{https://download.cdn.yandex.net/from/yandex.ru/support/ru/metri
 \references{
 See official dox:
 \href{https://yandex.ru/dev/metrika/doc/api2/practice/conversion-docpage/#offline}{API documents}
-\href{https://yandex.ru/support/metrica/data/offline-conversion_data.html}{Yandex Metrica documents}
+\href{https://yandex.ru/support/metrica/data/offline-conversions.html}{Yandex Metrica documents}
 }
 \author{
 Alexey Seleznev

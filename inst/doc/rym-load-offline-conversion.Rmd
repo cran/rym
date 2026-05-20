@@ -101,4 +101,4 @@ uploads <- rym_get_uploadings_offline_conversions(
 * [Отслеживание конверсий](https://yandex.ru/dev/metrika/doc/api2/practice/conversion-docpage/)
 * [Передача офлайн-конверсий](https://yandex.ru/dev/metrika/doc/api2/practice/offline-conv-docpage/)
 * [Загрузка офлайн-конверсий](https://yandex.ru/dev/metrika/doc/api2/management/offline_conversion/upload-docpage/)
-* [Оффлайн конверсии: Передача и обработка данных](https://yandex.ru/support/metrica/data/offline-conversion_data.html)
+* [Оффлайн конверсии: Передача и обработка данных](https://yandex.ru/support/metrica/data/offline-conversions.html)
